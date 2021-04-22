@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    active: @active.profile@
+
+server:
+  port: 8080
+
+azure:
+  activedirectory:
+    client-id: <client-id>
+    app-id-uri: <app-id-uri>
+    client-secret: <client-secret>
+    token-request-endpoint: <token-request-endpoint>
