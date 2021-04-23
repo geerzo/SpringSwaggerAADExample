@@ -7,7 +7,12 @@ server:
 
 azure:
   activedirectory:
+    tenant-id: <tenant-id>
     client-id: <client-id>
-    app-id-uri: <app-id-uri>
     client-secret: <client-secret>
-    token-request-endpoint: <token-request-endpoint>
+    app-id-uri: <app-id-uri>
+    token-request-endpoint: <endpoint>
+    authorization-clients:
+      graph:
+        scopes:
+          - https://graph.microsoft.com/User.Read
