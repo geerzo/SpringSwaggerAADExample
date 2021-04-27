@@ -16,6 +16,8 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.reactive.function.client.WebClient;
 
+import springfox.documentation.annotations.ApiIgnore;
+
 
 @RestController
 @RequestMapping("/users")
@@ -49,7 +51,7 @@ public class UserController {
      * @return Response with graph data
      */
     @GetMapping("call-graph")
-    public String callGraph(@RegisteredOAuth2AuthorizedClient("graph") OAuth2AuthorizedClient graph) {
+    public String callGraph(@ApiIgnore @RegisteredOAuth2AuthorizedClient("graph") OAuth2AuthorizedClient graph) {
         return callMicrosoftGraphMeEndpoint(graph);
     }
 
